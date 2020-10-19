@@ -48,7 +48,12 @@ const Payment = () => {
           <div className="payment__title">
             <h3>Payment Methods</h3>
           </div>
-          <div className="payment__details"></div>
+          <div className="payment__details">
+            <input type="checkbox" className="payment__detailsoption" /> Credit Card
+            <input type="checkbox" className="payment__detailsoption" /> COD
+            <input type="checkbox" className="payment__detailsoption" /> EMI
+            <button className="payment__detailsbutton">Proceed to Payment</button>
+          </div>
         </div>
       </div>
     </div>

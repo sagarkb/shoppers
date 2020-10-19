@@ -7,6 +7,7 @@ import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
 import Footer from "./components/Footer/Footer";
 import Payment from "./components/Payment/Payment";
+import Banner from "./components/Banner/Banner";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import "./App.css";
@@ -37,7 +38,7 @@ function App() {
         <Switch>
           <Route path="/primevideos" exact>
             <Header />
-            <h1>Prime Videos</h1>
+            <Banner />
           </Route>
           <Route path="/login" exact>
             <Login />

@@ -38,7 +38,7 @@ const Header = () => {
         <Link to="/primevideos">
           <div className="header__option">
             <span className="header__option1">Your</span>
-            <span className="header__option2">Prime</span>
+            <span className="header__option2">Videos</span>
           </div>
         </Link>
       </div>
