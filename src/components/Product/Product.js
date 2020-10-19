@@ -22,7 +22,7 @@ const Product = ({ id, title, price, rating, image }) => {
   return (
     <div className="product">
       <div className="product__info">
-        <p>{title}</p>
+        <p className="product__title">{title}</p>
         <p className="product__price">
           <small>₹</small>
           <strong>{price}</strong>
@@ -32,12 +32,14 @@ const Product = ({ id, title, price, rating, image }) => {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p key={Math.random()}>⭐</p>
+              <p key={Math.random()} className="product__star">
+                ⭐
+              </p>
             ))}
         </div>
       </div>
 
-      <img src={image} alt="book" />
+      <img className="product__image" src={image} alt="book" />
 
       <button onClick={addToBasket}>Add to Basket</button>
     </div>

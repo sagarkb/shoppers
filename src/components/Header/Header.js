@@ -4,6 +4,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 import "./Header.css";
+import logo from "../../assets/logo.png";
 import { useStateValue } from "../../StateProvider";
 import { auth } from "../../firebase";
 
@@ -19,11 +20,7 @@ const Header = () => {
   return (
     <div className="header">
       <Link to="/">
-        <img
-          className="header__logo"
-          src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-          alt="amazon"
-        />
+        <img className="header__logo" src={logo} alt="shoppers" />
       </Link>
 
       <div className="header__search">

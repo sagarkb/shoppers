@@ -1,3 +1,17 @@
+@keyframes shake {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-30px);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateX(-15px);
+  }
+}
+
 .product {
   display: flex;
   flex-direction: column;
@@ -11,6 +25,12 @@
   background-color: white;
   z-index: 1;
   border-radius: 10px;
+  transition: 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-20px);
+  box-shadow: 10px 10px 8px 3px rgba(0, 0, 0, 0.3);
 }
 
 .product > img {
@@ -18,6 +38,33 @@
   width: 100%;
   object-fit: contain;
   margin-bottom: 15px;
+}
+
+.product__image {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.product__image:hover {
+  transform: scale(1.3);
+}
+
+.product__title {
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.product__title:hover {
+  transform: skew(-20deg);
+}
+
+.product__star {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.product__star:hover {
+  transform: rotate(360deg);
 }
 
 .product__info {
@@ -40,4 +87,10 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
   padding: 3px;
+  cursor: pointer;
+}
+
+.product > button:hover {
+  animation-name: shake;
+  animation-duration: 2s;
 }

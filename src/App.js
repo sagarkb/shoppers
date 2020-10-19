@@ -5,6 +5,8 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
+import Footer from "./components/Footer/Footer";
+import Payment from "./components/Payment/Payment";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import "./App.css";
@@ -44,9 +46,14 @@ function App() {
             <Header />
             <Checkout />
           </Route>
+          <Route path="/payment" exact>
+            <Header />
+            <Payment />
+          </Route>
           <Route path="/">
             <Header />
             <Home />
+            <Footer />
           </Route>
         </Switch>
       </div>
@@ -57,6 +64,4 @@ function App() {
 export default App;
 
 //₹
-
-//https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg
-//https://upload.wikimedia
+//https://shoppers-sagar.web.app/
